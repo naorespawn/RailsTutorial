@@ -7,4 +7,12 @@ module ApplicationHelper
       page_title + "|" + base_title
     end
   end
+  
+  def palindrome_tester(s)
+    if s == s.reverse
+      puts "It's a palindrome!"
+    else
+      puts "It's not a palindrome."
+    end
+  end
 end

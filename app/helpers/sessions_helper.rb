@@ -29,6 +29,11 @@ module SessionsHelper
     !current_user.nil?
   end
   
+  # 与えられたユーザーがログイン済みユーザーであればtrueを返す
+  def current_user?(user)
+    user == current_user
+  end
+  
   # 永続的セッションを破棄する
   def forget(user)
     user.forget

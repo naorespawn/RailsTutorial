@@ -17,7 +17,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_template 'users/new'
     assert_select 'div#error_explanation', 1
     assert_select 'div.form-control', 0
-    assert_select 'form[action = "/signup"]'
   end
   
   test "vaild signup information with account activation" do
